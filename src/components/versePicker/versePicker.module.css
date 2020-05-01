@@ -1,8 +1,14 @@
 .input{
-    width:100% !important;
+    width:12rem !important;
     text-align: center !important; 
     margin: auto !important;
 }
 .container{
     margin: 3rem 0;
 }
+
+@media only screen and (max-width: 990px) {
+      .input{
+      width: 100% !important;
+    }
+  }

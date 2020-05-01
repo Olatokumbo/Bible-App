@@ -2,6 +2,7 @@ import React from "react";
 import {VersePicker, VerseOutput} from "./components";
 import styles from "./App.module.css";
 import {fetchChapters, fetchVerses, final} from "./api";
+import image from "./images/bible.png";
 class App extends React.Component{
     constructor(props){
         super(props);
@@ -37,6 +38,7 @@ componentWillMount(){
     render(){
         return(
             <div className={styles.container}>
+            <img className={styles.image} src={image} alt="bible logo" />
             <VersePicker handleFinal={this.handleFinal} handleChapter={this.handleChapter} handleVerse={this.handleVerse} chapter={this.state.chapter} verse={this.state.verse}/>
             <VerseOutput passage={this.state.text} book={this.state.displayBook} chapter={this.state.displayChapter} verse={this.state.displayVerse}/>
             </div>
